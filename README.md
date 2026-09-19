@@ -1,56 +1,51 @@
-# PROPETRABANGLADESH — Phase 4
+# PROPETRABANGLADESH
 
-Public-facing website for **PROPETRA**, a property management platform developed and operated by **TEAM PETRA**.
+**Public-facing website for PROPETRA — a property management platform developed and operated by TEAM PETRA.**
 
-## Current phase
+---
 
-**Phase 4 — Conversion + Contact**
+## Overview
 
-Phase 4 adds the documented conversion layer on top of the Phase 1–3 foundation:
+PROPETRABANGLADESH is the public-facing website for **PROPETRA**, providing product information, solutions, resources, and conversion-focused contact experiences for prospective users.
 
-- `/request-demo` — qualified demo request flow
-- `/contact` — general contact flow
-- Shared client-side forms with required-field and email validation
-- Server-side payload validation and honeypot handling
-- Explicit submitting, success and error states
-- Provider-agnostic server-side lead forwarding through `LEAD_ENDPOINT`
-- Real conversion CTAs throughout the public site now point to `/request-demo`
-- No lead is claimed as delivered unless an endpoint is configured and accepts it
+The website is built as a polished public product site while keeping a clear separation between:
 
-## Lead configuration
+- **PROPETRA** — the product
+- **PropetraBangladesh** — the public website
+- **TEAM PETRA** — the builder and operator
 
-Copy `.env.example` to `.env.local` and set:
+---
 
-```bash
-LEAD_ENDPOINT=https://your-approved-lead-service.example/endpoint
-```
+## Current Phase
 
-The server route at `/api/leads` validates the request and forwards the normalized payload to that configured endpoint. If `LEAD_ENDPOINT` is missing, the UI shows a clear configuration error rather than pretending that a lead was submitted.
+### Phase 4 — Conversion + Contact
 
-## Run locally
+Phase 4 builds the conversion and contact layer on top of the Phase 1–3 foundation.
 
-```bash
-npm install
-npm run dev
-```
+### Included
 
-Production check:
+- **Request a Demo** flow at `/request-demo`
+- **Contact** flow at `/contact`
+- Shared client-side form components
+- Required-field validation
+- Email format validation
+- Submitting, success, and error states
+- Server-side payload validation
+- Honeypot handling
+- Provider-agnostic lead forwarding
+- Configurable `LEAD_ENDPOINT`
+- Conversion CTAs throughout the public website
+- Clear configuration feedback when lead delivery is not configured
 
-```bash
-npm run build
-npm start
-```
+All primary conversion CTAs direct users to the `/request-demo` experience.
 
-## Product/content boundaries
+---
 
-PROPETRA is the product. PropetraBangladesh is the public website. TEAM PETRA is the builder/operator.
+## Lead Handling
 
-The site does not invent customers, testimonials, statistics, awards, certifications, partnerships, integrations, uptime commitments or security attestations. Dashboard figures remain explicitly illustrative.
+Lead forwarding is intentionally provider-agnostic.
 
-## Phase boundaries
+The server route:
 
-This phase implements the conversion/contact experience and its integration boundary. It does not introduce a property-booking engine, authenticated PMS application, CRM database, or fabricated submission storage.
-
-## Handoff hygiene
-
-The handoff package excludes `node_modules`, `.next`, build caches, `.env` files and secrets. `.env.example` is included as the configuration template.
+```text
+/api/leads
