@@ -1,51 +1,52 @@
 # PROPETRABANGLADESH
 
-**Public-facing website for PROPETRA — a property management platform developed and operated by TEAM PETRA.**
+**A modern public-facing website for PROPETRA — a property management platform developed and operated by TEAM PETRA.**
 
 ---
 
-## Overview
+## About
 
-PROPETRABANGLADESH is the public-facing website for **PROPETRA**, providing product information, solutions, resources, and conversion-focused contact experiences for prospective users.
+PROPETRABANGLADESH is the official public-facing website for **PROPETRA**, designed to present the product, its capabilities, solutions, resources, and contact experiences in a clear and professional way.
 
-The website is built as a polished public product site while keeping a clear separation between:
+The website provides prospective users with information about PROPETRA and dedicated experiences for requesting a demo or getting in touch with the team.
 
-- **PROPETRA** — the product
-- **PropetraBangladesh** — the public website
-- **TEAM PETRA** — the builder and operator
+### Brand Structure
+
+| Name | Role |
+|------|------|
+| **PROPETRA** | The property management product |
+| **PropetraBangladesh** | The public-facing website |
+| **TEAM PETRA** | The builder and operator |
 
 ---
 
-## Current Phase
+## Features
 
-### Phase 4 — Conversion + Contact
-
-Phase 4 builds the conversion and contact layer on top of the Phase 1–3 foundation.
-
-### Included
-
-- **Request a Demo** flow at `/request-demo`
-- **Contact** flow at `/contact`
-- Shared client-side form components
-- Required-field validation
-- Email format validation
-- Submitting, success, and error states
+- Modern responsive public website
+- Product and solution pages
+- Resources and informational content
+- Request a Demo experience
+- General Contact experience
+- Client-side form validation
 - Server-side payload validation
-- Honeypot handling
-- Provider-agnostic lead forwarding
-- Configurable `LEAD_ENDPOINT`
-- Conversion CTAs throughout the public website
-- Clear configuration feedback when lead delivery is not configured
-
-All primary conversion CTAs direct users to the `/request-demo` experience.
+- Email format validation
+- Required-field validation
+- Honeypot protection for forms
+- Clear loading, success, and error states
+- Configurable lead forwarding
+- Provider-agnostic lead endpoint
+- Conversion-focused calls to action
+- Responsive navigation and layouts
+- SEO metadata
+- Sitemap and robots configuration
 
 ---
 
-## Lead Handling
+## Demo & Contact
 
-Lead forwarding is intentionally provider-agnostic.
+The website provides dedicated conversion experiences for prospective users.
 
-The server route:
+### Request a Demo
 
 ```text
-/api/leads
+/request-demo
