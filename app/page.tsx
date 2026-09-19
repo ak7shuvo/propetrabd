@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata("Property Management, Simplified", "PROPETRA is a modern property management system for hospitality operations, bringing core property workflows into one platform.", "/");
 import Link from "next/link";
-import { ArrowRight, Building, Calendar, Check, Spark, Users } from "@/components/icons";
+import { ArrowRight, Building, Calendar, Check, Users } from "@/components/icons";
 import { Eyebrow, ProductPreview, SectionHeading } from "@/components/site";
 import { features, propertyTypes } from "@/lib/data";
 
@@ -94,7 +94,7 @@ export default function HomePage() {
             {features.map(f => (
               <article className="feature-card" key={f.number}>
                 <span className="feature-number">{f.number}</span>
-                <div className="feature-icon"><Spark size={19} /></div>
+                <div className="feature-icon"><Building size={19} /></div>
                 <h3>{f.title}</h3>
                 <p>{f.text}</p>
                 <Link href="/features">Learn more <ArrowRight size={15} /></Link>
@@ -117,7 +117,7 @@ export default function HomePage() {
           </div>
           <div className="solution-grid">
             {propertyTypes.slice(0, 4).map((p, i) => {
-              const Icon = [Building, Spark, Calendar, Users][i];
+              const Icon = [Building, Building, Calendar, Users][i];
               return (
                 <article className="solution-card" key={p.title}>
                   <div className="solution-icon"><Icon /></div>

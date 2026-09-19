@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Building, Calendar, Check, ChevronDown, Menu, Spark, Users } from "./icons";
+import { ArrowRight, Building, Calendar, Check, ChevronDown, Menu, Users } from "./icons";
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
@@ -305,7 +305,7 @@ export function FAQ({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
-export const solutionIcons = [Building, Spark, Calendar, Users, Building];
+export const solutionIcons = [Building, Building, Calendar, Users, Building];
 export function SolutionCard({
   title,
   text,
