@@ -27,12 +27,61 @@ const nav = [
   ["Resources", "/resources"],
 ];
 
+/*
+  Navbar refinement. Scoped to `header.navbar` so it layers over app/globals.css
+  (which is intentionally untouched) and never affects the footer or other sections.
+*/
+const navbarStyles = `
+header.navbar{background:rgba(251,248,244,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:none}
+header.navbar .nav-inner{height:68px;gap:32px}
+header.navbar .nav-links{gap:2px}
+header.navbar .nav-links a:not(.nav-demo){position:relative;padding:7px 12px;border-radius:6px;background:transparent;color:#4b5563;font-size:13.5px;font-weight:500;letter-spacing:-.005em;white-space:nowrap;transition:color .18s ease}
+header.navbar .nav-links a:not(.nav-demo)::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;border-radius:2px;background:var(--red);opacity:0;transform:scaleX(.4);transition:opacity .2s ease,transform .2s ease}
+header.navbar .nav-links a:not(.nav-demo):hover{color:var(--ink);background:transparent}
+header.navbar .nav-links a:not(.nav-demo):hover::after{opacity:.45;transform:scaleX(1)}
+header.navbar .nav-links a.active:not(.nav-demo){color:var(--ink);font-weight:500;background:transparent}
+header.navbar .nav-links a.active:not(.nav-demo)::after{opacity:1;transform:scaleX(1)}
+header.navbar .nav-links a:focus-visible,header.navbar .menu-button:focus-visible,header.navbar .brand:focus-visible{outline:2px solid rgba(220,38,38,.55);outline-offset:2px}
+header.navbar .nav-demo{gap:8px;padding:10px 18px;border:1px solid var(--red-dark);border-radius:8px;background:var(--red);color:#fff;font-size:13.5px;font-weight:600;letter-spacing:-.005em;box-shadow:0 1px 2px rgba(185,28,28,.28),inset 0 1px 0 rgba(255,255,255,.14);transition:background .2s ease,border-color .2s ease,box-shadow .2s ease}
+header.navbar .nav-demo:hover{background:var(--red-dark);border-color:#991b1b;box-shadow:0 2px 6px rgba(185,28,28,.28),inset 0 1px 0 rgba(255,255,255,.1);transform:none}
+header.navbar .nav-demo:active{background:#991b1b;box-shadow:none;transform:none}
+header.navbar .nav-demo:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+header.navbar .nav-demo svg{transition:transform .2s ease}
+header.navbar .nav-demo:hover svg{transform:translateX(2px)}
+@media (min-width:941px){header.navbar .nav-links{margin-left:auto;margin-right:auto}}
+@media (min-width:941px) and (max-width:1120px){
+header.navbar .nav-inner{gap:16px}
+header.navbar .nav-links a:not(.nav-demo){padding:7px 8px;font-size:13px}
+header.navbar .nav-links a:not(.nav-demo)::after{left:8px;right:8px}
+header.navbar .nav-demo{padding:9px 14px;font-size:13px}
+}
+@media (max-width:940px){
+header.navbar .nav-inner{height:64px;gap:16px}
+header.navbar .desktop-demo{display:none}
+header.navbar .menu-button{display:grid;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);transition:background .18s ease,border-color .18s ease,color .18s ease}
+header.navbar .menu-button:hover{background:rgba(220,38,38,.06);border-color:rgba(220,38,38,.35)}
+header.navbar .menu-button[aria-expanded="true"]{background:rgba(220,38,38,.06);border-color:rgba(220,38,38,.45);color:var(--red-dark)}
+header.navbar .nav-links{display:none;position:absolute;left:12px;right:12px;top:calc(100% + 6px);flex-direction:column;align-items:stretch;gap:2px;margin:0;padding:8px;background:rgba(251,248,244,.98);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 28px rgba(10,10,10,.08)}
+header.navbar .nav-links.open{display:flex}
+header.navbar .nav-links a:not(.nav-demo){padding:12px 14px;border-radius:8px;font-size:14px}
+header.navbar .nav-links a:not(.nav-demo)::after{display:none}
+header.navbar .nav-links a:not(.nav-demo):hover{background:rgba(220,38,38,.05);color:var(--ink)}
+header.navbar .nav-links a.active:not(.nav-demo){background:rgba(220,38,38,.07);color:var(--red-dark)}
+header.navbar .nav-links .mobile-demo{display:flex!important;justify-content:center!important;margin-top:6px;background:var(--red)!important;color:#fff!important}
+header.navbar .nav-links .mobile-demo:hover{background:var(--red-dark)!important;color:#fff!important}
+}
+@media (prefers-reduced-motion:reduce){
+header.navbar .nav-links a::after,header.navbar .nav-demo,header.navbar .nav-demo svg,header.navbar .menu-button{transition:none}
+}
+`;
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <>
+      <style dangerouslySetInnerHTML={{ __html: navbarStyles }} />
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="navbar">
         <div className="container nav-inner">
