@@ -26,7 +26,7 @@ Phase 2 source tree was inspected before changes, including `app/`, `components/
 | Boutique Properties | Complete | `/solutions/boutique-properties` |
 | Guest Houses | Complete | `/solutions/guest-houses` |
 | Serviced Apartments | Complete | `/solutions/serviced-apartments` |
-| Why PROPETRA | Complete | `/why-propetra` |
+| Why PETRA | Complete | `/why-propetra` |
 | Trust/security concepts | Complete | `/why-propetra`; no unsupported credentials claimed |
 | TEAM PETRA / About | Complete | `/about` |
 | FAQ / resources | Complete | `/resources` |
@@ -42,7 +42,7 @@ Phase 2 source tree was inspected before changes, including `app/`, `components/
 - No fabricated statistics, awards, partnerships or integrations added.
 - No security certification or compliance claim added.
 - Illustrative dashboard data remains labeled as demo/illustrative.
-- TEAM PETRA, PROPETRA and PropetraBangladesh remain distinct.
+- TEAM PETRA, PETRA and PETRA Bangladesh remain distinct.
 - Country-specific content is not hard-coded into the product identity.
 
 ## Architecture audit

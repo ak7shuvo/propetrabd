@@ -1,6 +1,10 @@
-# PROPETRABANGLADESH — v1.5
+# PETRA BANGLADESH — v1.6
 
-Public-facing website for **PROPETRA**, a property management platform developed and operated by **TEAM PETRA**.
+Public-facing website for **PETRA**, a property management platform developed and operated by **TEAM PETRA**.
+
+## v1.6
+
+Branding update: the public brand is now **PETRA** (previously PROPETRA). No design, layout, route or functionality changes. See `PROJECT-STATE.md`.
 
 ## v1.5
 
@@ -51,7 +55,7 @@ npm start
 
 ## Product/content boundaries
 
-PROPETRA is the product. PropetraBangladesh is the public website. TEAM PETRA is the builder/operator.
+PETRA is the product. PETRA Bangladesh is the public website. TEAM PETRA is the builder/operator.
 
 The site does not invent customers, testimonials, statistics, awards, certifications, partnerships, integrations, uptime commitments or security attestations. Dashboard figures remain explicitly illustrative.
 

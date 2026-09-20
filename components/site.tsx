@@ -7,10 +7,10 @@ import { ArrowRight, Building, Calendar, Check, ChevronDown, Close, Home, Key, M
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
-    <Link className="brand" href="/" aria-label="PropetraBangladesh home">
+    <Link className="brand" href="/" aria-label="PETRA Bangladesh home">
       <span className="brand-mark"><span /></span>
       <span>
-        <strong>PROPETRA</strong>
+        <strong>PETRA</strong>
         {!compact && <small>Bangladesh</small>}
       </span>
     </Link>
@@ -22,7 +22,7 @@ const nav = [
   ["Solutions", "/solutions"],
   ["Features", "/features"],
   ["How It Works", "/how-it-works"],
-  ["Why PROPETRA", "/why-propetra"],
+  ["Why PETRA", "/why-propetra"],
   ["About", "/about"],
   ["Resources", "/resources"],
 ];
@@ -121,7 +121,7 @@ export function SectionHeading({
 }
 
 export function CTASection({
-  title = "See PROPETRA in action.",
+  title = "See PETRA in action.",
   text = "Tell us about your property and the operational work you want to manage. The demo request workflow is now available through the conversion page.",
 }: {
   title?: string;
@@ -131,7 +131,7 @@ export function CTASection({
     <section className="cta section">
       <div className="container cta-inner">
         <div>
-          <Eyebrow>SEE PROPETRA IN ACTION</Eyebrow>
+          <Eyebrow>SEE PETRA IN ACTION</Eyebrow>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
@@ -161,7 +161,7 @@ export function Footer() {
           </div>
           <div>
             <strong>Company</strong>
-            <Link href="/why-propetra">Why PROPETRA</Link>
+            <Link href="/why-propetra">Why PETRA</Link>
             <Link href="/about">TEAM PETRA</Link>
             <Link href="/resources">Resources</Link>
           </div>
@@ -176,10 +176,10 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2026 TEAM PETRA. PROPETRA is a property management platform.</span>
+        <span>© 2026 TEAM PETRA. PETRA is a property management platform.</span>
         <span>
           <Link href="/contact">Contact TEAM PETRA</Link>
-          {" / "}PropetraBangladesh
+          {" / "}PETRA Bangladesh
         </span>
       </div>
     </footer>
@@ -188,10 +188,10 @@ export function Footer() {
 
 export function ProductPreview() {
   return (
-    <div className="product-shell" aria-label="Illustrative PROPETRA dashboard preview">
+    <div className="product-shell" aria-label="Illustrative PETRA dashboard preview">
       <div className="product-top">
         <div className="window-controls"><i /><i /><i /></div>
-        <span>PROPETRA / Overview</span>
+        <span>PETRA / Overview</span>
         <span className="product-date">Today, demo</span>
       </div>
       <div className="product-body">

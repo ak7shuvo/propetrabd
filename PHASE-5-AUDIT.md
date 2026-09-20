@@ -5,7 +5,7 @@ Final production-readiness pass over the Phase 4 repository, following the Phase
 
 ## Implemented
 - Added per-route SEO metadata for every public route, including unique titles/descriptions, canonical paths, Open Graph metadata and Twitter summary metadata.
-- Added structured data for TEAM PETRA (Organization), PROPETRA (SoftwareApplication) and PropetraBangladesh (WebSite) without unsupported commercial claims.
+- Added structured data for TEAM PETRA (Organization), PETRA (SoftwareApplication) and PETRA Bangladesh (WebSite) without unsupported commercial claims.
 - Added `app/sitemap.ts` and `app/robots.ts`; sitemap generation requires the approved `NEXT_PUBLIC_SITE_URL` instead of inventing a domain.
 - Added `.env.example` documenting the public site origin and the existing Phase 4 lead endpoint boundary.
 - Removed the CSS Google Fonts network import to reduce render-blocking/external dependency risk; the documented Inter/Plus Jakarta Sans stack now falls back to system fonts when unavailable.
@@ -17,7 +17,7 @@ Final production-readiness pass over the Phase 4 repository, following the Phase
 ## Content/claim audit
 - No fake customers, testimonials, ratings, statistics, awards, certifications, partnerships, integrations or uptime claims added.
 - Product preview values remain explicitly illustrative/demo data.
-- PROPETRA, PropetraBangladesh and TEAM PETRA remain distinct.
+- PETRA, PETRA Bangladesh and TEAM PETRA remain distinct.
 - Phase 4 lead handling remains endpoint-configurable; no fake success path was added.
 
 ## Route audit

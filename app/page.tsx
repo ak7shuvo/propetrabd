@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/seo";
-export const metadata = pageMetadata("Property Management, Simplified", "PROPETRA is a modern property management system for hospitality operations, bringing core property workflows into one platform.", "/");
+export const metadata = pageMetadata("Property Management, Simplified", "PETRA is a modern property management system for hospitality operations, bringing core property workflows into one platform.", "/");
 import Link from "next/link";
 import { ArrowRight, Building, Check, Home, Key, Sun } from "@/components/icons";
 import { Eyebrow, ProductPreview, SectionHeading } from "@/components/site";
@@ -28,10 +28,10 @@ export default function HomePage() {
               <span>Stronger</span>{" "}
               <span>Business<i className="stop" aria-hidden="true" /><b className="sr-only">.</b></span>
             </h1>
-            <p>PROPETRA brings reservations, rooms, guests, front desk, housekeeping, billing and reporting into one clear property management platform.</p>
+            <p>PETRA brings reservations, rooms, guests, front desk, housekeeping, billing and reporting into one clear property management platform.</p>
             <div className="hero-actions">
               <a className="btn primary large" href="/request-demo">Request a Demo <ArrowRight /></a>
-              <Link className="btn ghost large" href="/product">Explore PROPETRA</Link>
+              <Link className="btn ghost large" href="/product">Explore PETRA</Link>
             </div>
             <ul className="hero-note">
               <li>Centralized operations</li>
@@ -45,9 +45,9 @@ export default function HomePage() {
       </section>
 
       {/* 02 Product scope */}
-      <section className="metrics" aria-label="PROPETRA at a glance">
+      <section className="metrics" aria-label="PETRA at a glance">
         <div className="container metrics-grid">
-          <div className="metrics-intro">PROPETRA at a glance</div>
+          <div className="metrics-intro">PETRA at a glance</div>
           <div><strong>{productModules.length}</strong><span>Core modules</span><small>From reservations to reporting</small></div>
           <div><strong>{solutions.length}</strong><span>Property types</span><small>Hotels to serviced apartments</small></div>
           <div><strong>1</strong><span>Shared workspace</span><small>Role-based access for every team</small></div>
@@ -91,7 +91,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="DESIGNED FOR HOSPITALITY"
               title="Fits the way different properties operate."
-              text="From hotels and resorts to smaller properties and apartment-style stays, PROPETRA is organized around property-level workflows."
+              text="From hotels and resorts to smaller properties and apartment-style stays, PETRA is organized around property-level workflows."
             />
             <Link className="btn outline" href="/solutions">Explore solutions <ArrowRight /></Link>
           </div>
@@ -168,25 +168,25 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="ONE OPERATIONAL WORKSPACE"
             title="Everything your team needs to manage the day."
-            text="PROPETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
+            text="PETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
             align="center"
           />
           <div className="product-large">
             <ProductPreview />
           </div>
-          <ul className="module-chips" aria-label="PROPETRA modules">
+          <ul className="module-chips" aria-label="PETRA modules">
             {productModules.map((m) => <li key={m.slug}>{m.title}</li>)}
           </ul>
           <p className="demo-disclaimer">Illustrative interface and demo data for product presentation. Not customer or business statistics.</p>
         </div>
       </section>
 
-      {/* 08 Why PROPETRA */}
+      {/* 08 Why PETRA */}
       <section className="why section">
         <div className="container why-grid">
           <div className="why-copy">
             <SectionHeading
-              eyebrow="WHY PROPETRA"
+              eyebrow="WHY PETRA"
               title="Built around practical property management."
               text="The platform is designed to be understandable for teams, structured for managers and maintainable as the product grows."
             />
@@ -220,14 +220,14 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <Link className="inline-link" href="/why-propetra">Why PROPETRA <ArrowRight size={16} /></Link>
+            <Link className="inline-link" href="/why-propetra">Why PETRA <ArrowRight size={16} /></Link>
           </div>
           <div className="why-card">
             <div className="orbit orbit-a" />
             <div className="orbit orbit-b" />
             <div className="why-center">
               <span className="mini-logo large">P</span>
-              <strong>PROPETRA</strong>
+              <strong>PETRA</strong>
               <small>Property Excellence<br />Through Reliable Automation</small>
             </div>
             <div className="orbit-label l1">Operations</div>
@@ -244,7 +244,7 @@ export default function HomePage() {
           <div>
             <Eyebrow>BUILT BY TEAM PETRA</Eyebrow>
             <h2>Technology with a hospitality-first mindset.</h2>
-            <p>TEAM PETRA is building PROPETRA as a dedicated hospitality technology platform. The goal is practical software that helps property teams manage their work with greater clarity.</p>
+            <p>TEAM PETRA is building PETRA as a dedicated hospitality technology platform. The goal is practical software that helps property teams manage their work with greater clarity.</p>
           </div>
           <Link className="btn outline" href="/about">Meet TEAM PETRA <ArrowRight /></Link>
         </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
       <section className="cta section" id="demo">
         <div className="container cta-inner">
           <div>
-            <Eyebrow>SEE PROPETRA IN ACTION</Eyebrow>
+            <Eyebrow>SEE PETRA IN ACTION</Eyebrow>
             <h2>Let&apos;s talk about your property.</h2>
             <p>Use the dedicated request flow to share your property context and start a product conversation with TEAM PETRA.</p>
           </div>

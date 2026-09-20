@@ -6,7 +6,7 @@ Product
 Solutions
 Features
 How It Works
-Why PROPETRA
+Why PETRA
 About TEAM PETRA
 Resources
 Request a Demo
@@ -28,4 +28,4 @@ Request a Demo
  /request-demo
 
 ## Homepage
-Hero → Problem → Solution → Product Preview → Core Capabilities → Who It Is For → How It Works → Why PROPETRA → TEAM PETRA → Final CTA
+Hero → Problem → Solution → Product Preview → Core Capabilities → Who It Is For → How It Works → Why PETRA → TEAM PETRA → Final CTA

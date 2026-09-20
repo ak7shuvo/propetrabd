@@ -1,10 +1,10 @@
 # BRAND DIRECTION
 
 ## Brand hierarchy
-TEAM PETRA → PROPETRA → PropetraBangladesh
+TEAM PETRA → PETRA → PETRA Bangladesh
 
 ## Product
-PROPETRA — Property Excellence Through Reliable Automation
+PETRA — Property Excellence Through Reliable Automation
 
 ## Voice
 Professional, clear, confident, practical, human and hospitality-aware.

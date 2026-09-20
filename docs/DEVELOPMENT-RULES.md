@@ -6,7 +6,7 @@
 4. Reuse components.
 5. Avoid unnecessary rewrites/dependencies.
 6. Never invent business claims.
-7. Keep TEAM PETRA, PROPETRA and PropetraBangladesh distinct.
+7. Keep TEAM PETRA, PETRA and PETRA Bangladesh distinct.
 8. Test the implemented phase.
 9. Update PROJECT-STATE.md.
 10. Record known limitations and important decisions.

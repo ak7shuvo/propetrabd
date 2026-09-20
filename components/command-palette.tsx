@@ -15,18 +15,18 @@ import { ArrowRight, Enter, Search } from "./icons";
 type Item = { label: string; href: string; hint: string; group: string };
 
 const ITEMS: Item[] = [
-  { group: "Explore", label: "Home", href: "/", hint: "Overview of PROPETRA" },
+  { group: "Explore", label: "Home", href: "/", hint: "Overview of PETRA" },
   { group: "Explore", label: "Product", href: "/product", hint: "Workspace, modules and preview" },
   { group: "Explore", label: "Features", href: "/features", hint: "Core capabilities in detail" },
   { group: "Explore", label: "How It Works", href: "/how-it-works", hint: "From setup to daily operations" },
-  { group: "Explore", label: "Why PROPETRA", href: "/why-propetra", hint: "Principles and trust" },
+  { group: "Explore", label: "Why PETRA", href: "/why-propetra", hint: "Principles and trust" },
   { group: "Solutions", label: "All solutions", href: "/solutions", hint: "Property types overview" },
   { group: "Solutions", label: "Hotels", href: "/solutions/hotels", hint: "Property type" },
   { group: "Solutions", label: "Resorts", href: "/solutions/resorts", hint: "Property type" },
   { group: "Solutions", label: "Boutique Properties", href: "/solutions/boutique-properties", hint: "Property type" },
   { group: "Solutions", label: "Guest Houses", href: "/solutions/guest-houses", hint: "Property type" },
   { group: "Solutions", label: "Serviced Apartments", href: "/solutions/serviced-apartments", hint: "Property type" },
-  { group: "Company", label: "About TEAM PETRA", href: "/about", hint: "Who is building PROPETRA" },
+  { group: "Company", label: "About TEAM PETRA", href: "/about", hint: "Who is building PETRA" },
   { group: "Company", label: "Resources", href: "/resources", hint: "Notes and FAQ" },
   { group: "Company", label: "Contact", href: "/contact", hint: "Get in touch" },
   { group: "Company", label: "Request a Demo", href: "/request-demo", hint: "Start a product conversation" },

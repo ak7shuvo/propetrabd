@@ -13,12 +13,12 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "TEAM PETRA",
-    brand: { "@type": "Brand", name: "PROPETRA" },
+    brand: { "@type": "Brand", name: "PETRA" },
   },
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "PROPETRA",
+    name: "PETRA",
     applicationCategory: "BusinessApplication",
     description: "A property management system for hospitality operations.",
     operatingSystem: "Web",
@@ -26,8 +26,8 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "PropetraBangladesh",
-    description: "Public business and product website for PROPETRA.",
+    name: "PETRA Bangladesh",
+    description: "Public business and product website for PETRA.",
   },
 ];
 

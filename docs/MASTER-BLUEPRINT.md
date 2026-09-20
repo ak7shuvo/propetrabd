@@ -1,20 +1,20 @@
-# MASTER BLUEPRINT — PROPETRABANGLADESH
+# MASTER BLUEPRINT — PETRA BANGLADESH
 
 ## Executive Definition
-PropetraBangladesh is the public-facing business and product website for PROPETRA, a modern cloud-based Property Management System developed and operated by TEAM PETRA.
+PETRA Bangladesh is the public-facing business and product website for PETRA, a modern cloud-based Property Management System developed and operated by TEAM PETRA.
 
-PROPETRA is the product.
-PropetraBangladesh is the public website.
+PETRA is the product.
+PETRA Bangladesh is the public website.
 TEAM PETRA is the builder/operator.
 
 ## Business Purpose
-The site explains PROPETRA, demonstrates its intended PMS experience, establishes trust, explains target hospitality businesses, and generates qualified demo/contact requests.
+The site explains PETRA, demonstrates its intended PMS experience, establishes trust, explains target hospitality businesses, and generates qualified demo/contact requests.
 
 ## Audience
 Hotel owners, hotel managers, resort operators, boutique properties, guest house operators and hospitality decision-makers.
 
 ## Core user questions
-What is PROPETRA? Who is it for? What does it manage? What does it look like? Who builds it? How do I request a demo?
+What is PETRA? Who is it for? What does it manage? What does it look like? Who builds it? How do I request a demo?
 
 ## Product modules
 Reservations, Rooms, Front Desk, Guests, Housekeeping, Billing, Payments, Staff/Roles, Reports/Analytics and Property Management.
@@ -26,12 +26,12 @@ Use realistic illustrative data such as occupancy, arrivals, departures, revenue
 Different hospitality businesses use the same underlying service while maintaining separate workspaces, users, permissions and operational data.
 
 ## Homepage
-Hero → Problem → Solution → Product Preview → Core Capabilities → Who It Is For → How It Works → Why PROPETRA → TEAM PETRA → Final CTA.
+Hero → Problem → Solution → Product Preview → Core Capabilities → Who It Is For → How It Works → Why PETRA → TEAM PETRA → Final CTA.
 
 Suggested hero:
 “Run Your Property. Smarter.”
 Primary CTA: Request a Demo
-Secondary CTA: Explore PROPETRA
+Secondary CTA: Explore PETRA
 
 ## Conversion
 Demo fields:
@@ -58,7 +58,7 @@ Optimized assets, minimal unnecessary JavaScript, sensible code splitting, light
 Never invent customers, statistics, awards, certifications, partnerships, testimonials, integrations or uptime claims.
 
 ## Internationalization principle
-Current website is Bangladesh-focused, but PROPETRA itself must not be hard-coded as Bangladesh-only. Keep country-specific content modular.
+Current website is Bangladesh-focused, but PETRA itself must not be hard-coded as Bangladesh-only. Keep country-specific content modular.
 
 ## Success criteria
 A visitor should understand the product category within seconds, understand the major modules within a minute, see how the product works within a few minutes, know TEAM PETRA builds it, and have an obvious route to request a demo.

@@ -10,7 +10,7 @@ Design system, navigation, responsive foundation, premium homepage, product prev
 Product and feature pages, PMS module presentations, realistic product previews and multi-tenant explanation.
 
 ## Phase 3 — Solutions + Trust + TEAM PETRA
-Solutions, How It Works, Why PROPETRA, security concepts, multi-tenancy, TEAM PETRA and FAQ.
+Solutions, How It Works, Why PETRA, security concepts, multi-tenancy, TEAM PETRA and FAQ.
 
 ## Phase 4 — Conversion + Contact
 Request Demo, Contact, forms, validation, success/error states and CTA system.

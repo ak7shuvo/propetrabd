@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-const siteName = "PropetraBangladesh";
-const siteDescription = "PROPETRA is a modern property management system for hospitality operations, bringing reservations, rooms, guests, front desk, housekeeping, billing and reporting into one platform.";
+const siteName = "PETRA Bangladesh";
+const siteDescription = "PETRA is a modern property management system for hospitality operations, bringing reservations, rooms, guests, front desk, housekeeping, billing and reporting into one platform.";
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   return {
@@ -9,27 +9,27 @@ export function pageMetadata(title: string, description: string, path: string): 
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: `${title} | PROPETRA`,
+      title: `${title} | PETRA`,
       description,
       type: "website",
       siteName,
       url: path,
     },
-    twitter: { card: "summary", title: `${title} | PROPETRA`, description },
+    twitter: { card: "summary", title: `${title} | PETRA`, description },
   };
 }
 
 export const rootMetadata: Metadata = {
-  title: { default: "PROPETRA — Property Management, Simplified", template: "%s | PROPETRA" },
+  title: { default: "PETRA — Property Management, Simplified", template: "%s | PETRA" },
   description: siteDescription,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "PROPETRA — Property Management, Simplified",
+    title: "PETRA — Property Management, Simplified",
     description: siteDescription,
     type: "website",
     siteName,
     url: "/",
   },
-  twitter: { card: "summary", title: "PROPETRA — Property Management, Simplified", description: siteDescription },
+  twitter: { card: "summary", title: "PETRA — Property Management, Simplified", description: siteDescription },
   robots: { index: true, follow: true },
 };

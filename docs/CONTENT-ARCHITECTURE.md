@@ -20,6 +20,6 @@ Target properties:
 - Serviced Apartments
 
 Primary CTA: Request a Demo
-Secondary CTA: Explore PROPETRA
+Secondary CTA: Explore PETRA
 
 Never invent customer numbers, testimonials, awards, certifications, partnerships, integrations or performance claims.

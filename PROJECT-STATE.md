@@ -1,7 +1,7 @@
 # PROJECT STATE
 
-Project: PropetraBangladesh  
-Product: PROPETRA  
+Project: PETRA Bangladesh  
+Product: PETRA  
 Developer & Operator: TEAM PETRA  
 Current Phase: 5 + v1.4 visual upgrade  
 Status: Planned Phase 0–5 implementation complete; Phase 5 production polish and QA pass implemented.
@@ -10,8 +10,8 @@ Status: Planned Phase 0–5 implementation complete; Phase 5 production polish a
 
 - Next.js App Router + TypeScript foundation
 - Responsive shared Navbar / mobile navigation / Footer
-- Documented PROPETRA visual system and content boundaries
-- Homepage, Product, Features, How It Works, Solutions, Why PROPETRA, TEAM PETRA and Resources
+- Documented PETRA visual system and content boundaries
+- Homepage, Product, Features, How It Works, Solutions, Why PETRA, TEAM PETRA and Resources
 - Hotels, Resorts, Boutique Properties, Guest Houses and Serviced Apartments solution pages
 - Trust/security concepts without unsupported certification or compliance claims
 - Reusable product preview and page components
@@ -68,7 +68,7 @@ Visual-only release on top of v1.3. Routes, API behaviour, dependencies and pack
 
 - New identity: black + cream + red. Green reduced to status indicators (see `docs/DESIGN-SYSTEM.md`).
 - New homepage hero: "Smarter Stays. Stronger Business." with a hotel-facade visual where lit windows are occupied rooms, plus occupancy, booking and revenue cards (illustrative data, labelled).
-- Homepage restructured: hero, product scope band, problem, solutions, features (bento), platform preview, how it works, why PROPETRA, team, CTA. All copy reused from v1.3.
+- Homepage restructured: hero, product scope band, problem, solutions, features (bento), platform preview, how it works, why PETRA, team, CTA. All copy reused from v1.3.
 - Section and card backgrounds now differ by design (tone system, section 9 of `globals.css`).
 - `app/globals.css` rewritten around design tokens; JetBrains Mono for display/UI, Inter for body. Plus Jakarta Sans removed from the font request.
 - Sparkle icon and its usages removed; replaced by purpose-specific line icons.
@@ -96,3 +96,15 @@ Built on v1.4. Routes, API behaviour, dependencies and package versions unchange
 - Room board on the hero replaces the fixed "Revenue today" card with live in-house / arriving / vacant counts.
 
 Verification: client-side render of the homepage in Chromium; hero interaction (mouse and keyboard), all six story scenes, palette (open, filter, navigate, close, focus return), and overflow at 320 to 1440px, with no console errors or warnings. `npm run build` still needs to be run in a networked environment.
+
+## v1.6 — Brand rename (PROPETRA to PETRA)
+
+Branding-only release on top of v1.5. No design, layout, animation, route, API, form, dependency or version changes.
+
+- Public brand is now **PETRA**; the public website is **PETRA Bangladesh**; TEAM PETRA is unchanged.
+- Updated: visible UI text, aria-labels, page titles and descriptions, OpenGraph/Twitter metadata, JSON-LD (Organization brand, SoftwareApplication, WebSite), FAQ content, command palette labels, README, docs and phase audit notes.
+- Intentionally preserved technical identifiers (renaming would change routes or tooling):
+  - Route `/why-propetra` (folder `app/why-propetra`, links, sitemap entry, canonical path, docs listing it).
+  - Package name `propetra-bangladesh` in `package.json` and `package-lock.json`.
+  - Internal browser event name `propetra:palette` (search button to command palette).
+- "Property Excellence Through Reliable Automation" still expands the new name (P-E-T-R-A).

@@ -30,9 +30,9 @@ export const solutions = [
  {slug:"serviced-apartments", title:"Serviced Apartments", summary:"Property-level workflows suited to apartment-style stays, units and guest operations.", points:["Unit and reservation context","Longer-stay visibility","Guest and billing information","Role-based workspace"]},
 ];
 export const faqs = [
- {q:"What is PROPETRA?",a:"PROPETRA is a property management platform being developed by TEAM PETRA. It is designed to bring core hospitality workflows such as reservations, rooms, guests, housekeeping, billing and reporting into a structured property workspace."},
- {q:"What types of properties is PROPETRA designed for?",a:"The current product direction covers hotels, resorts, boutique properties, guest houses and serviced apartments. The underlying product is intended to remain adaptable rather than being hard-coded to one property type or country."},
- {q:"Does PROPETRA replace a booking website?",a:"No. PROPETRA is positioned as an operational property management system, not a public hotel booking marketplace or consumer booking website."},
+ {q:"What is PETRA?",a:"PETRA is a property management platform being developed by TEAM PETRA. It is designed to bring core hospitality workflows such as reservations, rooms, guests, housekeeping, billing and reporting into a structured property workspace."},
+ {q:"What types of properties is PETRA designed for?",a:"The current product direction covers hotels, resorts, boutique properties, guest houses and serviced apartments. The underlying product is intended to remain adaptable rather than being hard-coded to one property type or country."},
+ {q:"Does PETRA replace a booking website?",a:"No. PETRA is positioned as an operational property management system, not a public hotel booking marketplace or consumer booking website."},
  {q:"How does multi-tenancy work conceptually?",a:"The platform is designed so different hospitality businesses can use the same underlying service while maintaining separate property workspaces, users, permissions and operational data."},
  {q:"Does the website claim security certifications?",a:"No. This public website intentionally does not claim certifications, compliance attestations, uptime figures or other security credentials that have not been documented and verified."},
  {q:"Can I request a demo?",a:"Yes. The site provides a Request a Demo path for the commercial experience. The actual lead form, validation, submission handling and success/error states are planned for Phase 4."},
