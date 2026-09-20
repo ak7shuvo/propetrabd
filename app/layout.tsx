@@ -3,6 +3,8 @@ import "./globals.css";
 import { rootMetadata } from "@/lib/seo";
 import { Navbar, Footer } from "@/components/site";
 import { ScrollReveal } from "@/components/reveal";
+import { CommandPalette } from "@/components/command-palette";
+import { SiteEffects } from "@/components/effects";
 
 export const metadata: Metadata = rootMetadata;
 
@@ -45,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <ScrollReveal />
+        <SiteEffects />
+        <CommandPalette />
         {structuredData.map((item, index) => (
           <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }} />
         ))}

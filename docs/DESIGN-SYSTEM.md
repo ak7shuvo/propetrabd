@@ -1,4 +1,4 @@
-# DESIGN SYSTEM — v1.4
+# DESIGN SYSTEM — v1.5
 
 Identity: **black + cream + red**. Green is a status colour only.
 
@@ -43,3 +43,16 @@ Cards read `--card-bg/-fg/-muted/-line/-icon-bg/-icon-fg/-link`. Tones are assig
 - No emoji or sparkle glyphs as UI decoration; use line icons from `components/icons.tsx`.
 - Dashboard figures remain illustrative and labelled as such. Homepage scope numbers (modules, property types) are derived from `lib/data.ts`, never invented.
 - Responsive targets: 320px, 560px, 800px, 980px (mobile navigation), 1140px+.
+
+## v1.5 — Living property
+
+Concept: the building is the dashboard. Every window is a room, and the interface uses that one metaphor everywhere.
+
+- **Hero room board** (`components/hero.tsx`): windows are buttons. Click or use arrow keys and Enter to cycle a room through vacant, arriving and occupied. Occupancy, sparkline, room counts and the activity card all derive from that one state. Starting values and the seeded trend are illustrative and labelled.
+- **Property story** (`components/story.tsx`): a pinned building re-lights for each of the six modules while the page scrolls (arrivals, room status, linked guest stay, housekeeping, folios, floor heat map). Room patterns and derived counts are illustrative. Do not put `overflow: hidden` on any ancestor of `.story-stage`, it breaks `position: sticky`.
+- **Command palette** (`components/command-palette.tsx`): Ctrl/Cmd + K, or `/`, or the navigation search button. Lists existing routes only.
+- **Scroll hairline**: `--scroll` on `<html>` drives a 2px red line under the navigation.
+- **Pointer light**: `--mx` / `--my` on cards drive a soft radial highlight (fine pointers only). Add new card types to the selector list in `components/effects.tsx` and to the pointer-light block in `globals.css`.
+- **Film grain**: an inline SVG noise overlay on the hero and story only.
+- Window state colours: cream = occupied/ready, red = arriving/needs attention, dark = vacant. Green stays limited to "ready to sell" and progress status.
+- All interactivity respects `prefers-reduced-motion` (transitions and animations are disabled globally).

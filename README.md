@@ -1,6 +1,10 @@
-# PROPETRABANGLADESH — v1.4
+# PROPETRABANGLADESH — v1.5
 
 Public-facing website for **PROPETRA**, a property management platform developed and operated by **TEAM PETRA**.
+
+## v1.5
+
+Interactive release: working hero room board, scroll-driven property story, command palette (Ctrl/Cmd + K). See `docs/DESIGN-SYSTEM.md`.
 
 ## v1.4
 

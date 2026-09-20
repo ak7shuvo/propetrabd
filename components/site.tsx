@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Building, Calendar, Check, ChevronDown, Close, Home, Key, Menu, Sun, Users } from "./icons";
+import { ArrowRight, Building, Calendar, Check, ChevronDown, Close, Home, Key, Menu, Search, Sun, Users } from "./icons";
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
@@ -69,6 +69,15 @@ export function Navbar() {
               Request a Demo <ArrowRight size={15} />
             </a>
           </nav>
+          <button
+            type="button"
+            className="cmd-trigger"
+            aria-label="Search pages"
+            title="Search pages (Ctrl K)"
+            onClick={() => window.dispatchEvent(new Event("propetra:palette"))}
+          >
+            <Search size={17} />
+          </button>
           <a className="nav-demo desktop-demo" href="/request-demo">
             Request a Demo <ArrowRight size={15} />
           </a>

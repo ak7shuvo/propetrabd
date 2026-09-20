@@ -83,3 +83,16 @@ Visual-only release on top of v1.3. Routes, API behaviour, dependencies and pack
 - Scroll-reveal logic tested in Chromium, including reduced-motion.
 - CSS parsed with PostCSS, all `var()` tokens resolved, TypeScript checked against stubbed React/Next types.
 - `npm run build` could not be run in the authoring environment (npm registry blocked). Run `npm install && npm run build` before deploying.
+
+## v1.5 — Living property (interactive UI release)
+
+Built on v1.4. Routes, API behaviour, dependencies and package versions unchanged; no new dependencies.
+
+- Hero is now a working miniature room board (click or keyboard). See `docs/DESIGN-SYSTEM.md`.
+- Homepage features section replaced by a scroll-driven "One building. Six modules." story using the same six feature entries from `lib/data.ts`.
+- Section order: hero, scope band, problem, solutions, story, how it works, platform preview, why, team, CTA.
+- New: command palette (Ctrl/Cmd + K, `/`), scroll progress hairline, pointer light on cards, film grain on hero and story.
+- New files: `components/story.tsx`, `components/command-palette.tsx`, `components/effects.tsx`. Rewritten: `components/hero.tsx`.
+- Room board on the hero replaces the fixed "Revenue today" card with live in-house / arriving / vacant counts.
+
+Verification: client-side render of the homepage in Chromium; hero interaction (mouse and keyboard), all six story scenes, palette (open, filter, navigate, close, focus return), and overflow at 320 to 1440px, with no console errors or warnings. `npm run build` still needs to be run in a networked environment.

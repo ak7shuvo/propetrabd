@@ -1,12 +1,12 @@
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata("Property Management, Simplified", "PROPETRA is a modern property management system for hospitality operations, bringing core property workflows into one platform.", "/");
 import Link from "next/link";
-import { ArrowRight, Building, Calendar, Chart, Check, Clipboard, Door, Home, Key, Receipt, Sun, Users } from "@/components/icons";
+import { ArrowRight, Building, Check, Home, Key, Sun } from "@/components/icons";
 import { Eyebrow, ProductPreview, SectionHeading } from "@/components/site";
 import { HeroVisual } from "@/components/hero";
+import { PropertyStory } from "@/components/story";
 import { features, productModules, propertyTypes, solutions } from "@/lib/data";
 
-const featureIcons = [Calendar, Door, Users, Clipboard, Receipt, Chart];
 const solutionIconSet = [Building, Sun, Key, Home];
 
 export default function HomePage() {
@@ -111,62 +111,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 05 Features */}
-      <section className="features section" id="features">
+      {/* 05 One building, six modules */}
+      <section className="story section" id="features">
         <div className="container">
           <SectionHeading
             eyebrow="CORE CAPABILITIES"
-            title="A clearer way to run the property."
-            text="Focused modules work together so your team can spend less time coordinating information and more time operating the property."
+            title="One building. Six modules. One picture."
+            text="Scroll through the modules and watch the same property change with each one. Focused capabilities work together so your team spends less time coordinating information and more time operating the property."
           />
-          <div className="feature-grid">
-            {features.map((f, i) => {
-              const Icon = featureIcons[i];
-              return (
-                <article className="feature-card" key={f.title}>
-                  <div className="feature-icon"><Icon size={20} /></div>
-                  <h3>{f.title}</h3>
-                  <p>{f.text}</p>
-                  {i === 0 && (
-                    <div className="mini-timeline" aria-hidden="true">
-                      <i style={{ left: "0%", width: "38%" }} />
-                      <i style={{ left: "22%", width: "44%" }} />
-                      <i style={{ left: "52%", width: "40%" }} />
-                    </div>
-                  )}
-                  {i === 5 && (
-                    <div className="mini-bars" aria-hidden="true">
-                      {[38, 52, 44, 68, 58, 82, 74].map((h, n) => <i key={n} style={{ height: `${h}%` }} />)}
-                    </div>
-                  )}
-                  <Link href="/features">Learn more <ArrowRight size={15} /></Link>
-                </article>
-              );
-            })}
-          </div>
+          <PropertyStory steps={features.map((f) => ({ title: f.title, text: f.text }))} />
+          <p className="demo-disclaimer">Illustrative property view. Room patterns and counts are demonstration data.</p>
         </div>
       </section>
 
-      {/* 06 Platform preview */}
-      <section className="product section" id="product">
-        <div className="container">
-          <SectionHeading
-            eyebrow="ONE OPERATIONAL WORKSPACE"
-            title="Everything your team needs to manage the day."
-            text="PROPETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
-            align="center"
-          />
-          <div className="product-large">
-            <ProductPreview />
-          </div>
-          <ul className="module-chips" aria-label="PROPETRA modules">
-            {productModules.map((m) => <li key={m.slug}>{m.title}</li>)}
-          </ul>
-          <p className="demo-disclaimer">Illustrative interface and demo data for product presentation. Not customer or business statistics.</p>
-        </div>
-      </section>
-
-      {/* 07 How it works */}
+      {/* 06 How it works */}
       <section className="how section">
         <div className="container">
           <SectionHeading
@@ -201,6 +159,25 @@ export default function HomePage() {
           <div className="center-link">
             <Link href="/how-it-works">Explore the full workflow <ArrowRight size={16} /></Link>
           </div>
+        </div>
+      </section>
+
+      {/* 07 Platform preview */}
+      <section className="product section" id="product">
+        <div className="container">
+          <SectionHeading
+            eyebrow="ONE OPERATIONAL WORKSPACE"
+            title="Everything your team needs to manage the day."
+            text="PROPETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
+            align="center"
+          />
+          <div className="product-large">
+            <ProductPreview />
+          </div>
+          <ul className="module-chips" aria-label="PROPETRA modules">
+            {productModules.map((m) => <li key={m.slug}>{m.title}</li>)}
+          </ul>
+          <p className="demo-disclaimer">Illustrative interface and demo data for product presentation. Not customer or business statistics.</p>
         </div>
       </section>
 
