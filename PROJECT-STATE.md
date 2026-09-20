@@ -3,7 +3,7 @@
 Project: PropetraBangladesh  
 Product: PROPETRA  
 Developer & Operator: TEAM PETRA  
-Current Phase: 5  
+Current Phase: 5 + v1.4 visual upgrade  
 Status: Planned Phase 0–5 implementation complete; Phase 5 production polish and QA pass implemented.
 
 ## Implemented through Phase 4
@@ -61,3 +61,25 @@ No CRM/database, fake lead storage, customer records, or unsupported third-party
 - A real lead destination must be supplied through `LEAD_ENDPOINT`; the repository intentionally does not invent an email address, CRM, database, or third-party provider.
 - Full browser/device QA and production integration testing require a dependency-installed runtime and a configured lead endpoint.
 - Full real-device/browser and production integration testing still requires a dependency-installed runtime, an approved production domain, and a configured real lead endpoint.
+
+## v1.4 — Premium visual and UX transformation
+
+Visual-only release on top of v1.3. Routes, API behaviour, dependencies and package versions are unchanged.
+
+- New identity: black + cream + red. Green reduced to status indicators (see `docs/DESIGN-SYSTEM.md`).
+- New homepage hero: "Smarter Stays. Stronger Business." with a hotel-facade visual where lit windows are occupied rooms, plus occupancy, booking and revenue cards (illustrative data, labelled).
+- Homepage restructured: hero, product scope band, problem, solutions, features (bento), platform preview, how it works, why PROPETRA, team, CTA. All copy reused from v1.3.
+- Section and card backgrounds now differ by design (tone system, section 9 of `globals.css`).
+- `app/globals.css` rewritten around design tokens; JetBrains Mono for display/UI, Inter for body. Plus Jakarta Sans removed from the font request.
+- Sparkle icon and its usages removed; replaced by purpose-specific line icons.
+- Lightweight motion: CSS keyframes plus one IntersectionObserver (`components/reveal.tsx`); reduced-motion respected.
+- Navigation: dark, active/hover underline, Escape closes the mobile menu, close icon, hamburger below 980px.
+- Illustrative dashboard figures unified to one demo dataset (86% occupancy, 104 rooms).
+- `.env.example` restored (documented in earlier phases but missing from the v1.3 archive).
+
+## v1.4 verification
+
+- Static render of all 11 pages, browser checks at 1440, 1024 and 390px wide, no horizontal overflow.
+- Scroll-reveal logic tested in Chromium, including reduced-motion.
+- CSS parsed with PostCSS, all `var()` tokens resolved, TypeScript checked against stubbed React/Next types.
+- `npm run build` could not be run in the authoring environment (npm registry blocked). Run `npm install && npm run build` before deploying.

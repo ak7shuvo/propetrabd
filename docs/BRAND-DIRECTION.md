@@ -11,13 +11,13 @@ Professional, clear, confident, practical, human and hospitality-aware.
 
 Avoid exaggerated claims, fake social proof, unsupported statistics, fake customers, awards, certifications, partnerships or testimonials.
 
-## Visual
-Premium, modern, operational, trustworthy and restrained.
+## Visual (v1.4)
+Premium hospitality-technology look: confident, editorial, restrained.
 
-Primary: #0F766E
-Accent: #F97316
-Neutrals: #0F172A #334155 #64748B #94A3B8 #E2E8F0 #F8FAFC #FFFFFF
+Primary: black #0b0a09, cream #f2eadb / ivory #fbf8f1, red #c1272d
+Green: status indicators only (#2e9d5f)
 
-Typography: Inter; Plus Jakarta Sans may be used for display.
+Typography: JetBrains Mono for display/UI; Inter for reading text.
 
-Avoid excessive gradients, glassmorphism and stock-photo-heavy layouts.
+Avoid excessive gradients, glassmorphism, neon effects, emoji decoration and stock-photo-heavy layouts.
+Tagline: Smarter Stays. Stronger Business.

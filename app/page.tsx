@@ -1,42 +1,60 @@
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata("Property Management, Simplified", "PROPETRA is a modern property management system for hospitality operations, bringing core property workflows into one platform.", "/");
 import Link from "next/link";
-import { ArrowRight, Building, Calendar, Check, Users } from "@/components/icons";
+import { ArrowRight, Building, Calendar, Chart, Check, Clipboard, Door, Home, Key, Receipt, Sun, Users } from "@/components/icons";
 import { Eyebrow, ProductPreview, SectionHeading } from "@/components/site";
-import { features, propertyTypes } from "@/lib/data";
+import { HeroVisual } from "@/components/hero";
+import { features, productModules, propertyTypes, solutions } from "@/lib/data";
+
+const featureIcons = [Calendar, Door, Users, Clipboard, Receipt, Chart];
+const solutionIconSet = [Building, Sun, Key, Home];
 
 export default function HomePage() {
   return (
     <main id="main-content">
 
-      {/* Hero */}
+      {/* 01 Hero */}
       <section className="hero">
-        <div className="hero-grid" />
+        <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-inner">
           <div className="hero-copy">
             <div className="hero-badge">
               <span className="pulse" />
               Built for modern hospitality operations
             </div>
-            <h1>Run your property.<br /><em>Smarter.</em></h1>
+            <h1 className="hero-title">
+              <span>Smarter</span>{" "}
+              <span>Stays.</span>{" "}
+              <span>Stronger</span>{" "}
+              <span>Business<i className="stop" aria-hidden="true" /><b className="sr-only">.</b></span>
+            </h1>
             <p>PROPETRA brings reservations, rooms, guests, front desk, housekeeping, billing and reporting into one clear property management platform.</p>
             <div className="hero-actions">
-              <a className="btn primary" href="/request-demo">Request a Demo <ArrowRight /></a>
-              <Link className="btn text-btn" href="/product">Explore PROPETRA <ArrowRight size={17} /></Link>
+              <a className="btn primary large" href="/request-demo">Request a Demo <ArrowRight /></a>
+              <Link className="btn ghost large" href="/product">Explore PROPETRA</Link>
             </div>
-            <div className="hero-note">
-              <span><Check size={15} /> Centralized operations</span>
-              <span><Check size={15} /> Role-based access</span>
-              <span><Check size={15} /> Built for growth</span>
-            </div>
+            <ul className="hero-note">
+              <li>Centralized operations</li>
+              <li>Role-based access</li>
+              <li>Built for growth</li>
+            </ul>
           </div>
-          <div className="hero-visual">
-            <ProductPreview />
-          </div>
+          <HeroVisual />
+        </div>
+        <p className="hero-disclaimer container">Illustrative interface and demo data. Not customer or business statistics.</p>
+      </section>
+
+      {/* 02 Product scope */}
+      <section className="metrics" aria-label="PROPETRA at a glance">
+        <div className="container metrics-grid">
+          <div className="metrics-intro">PROPETRA at a glance</div>
+          <div><strong>{productModules.length}</strong><span>Core modules</span><small>From reservations to reporting</small></div>
+          <div><strong>{solutions.length}</strong><span>Property types</span><small>Hotels to serviced apartments</small></div>
+          <div><strong>1</strong><span>Shared workspace</span><small>Role-based access for every team</small></div>
         </div>
       </section>
 
-      {/* Problem */}
+      {/* 03 Problem */}
       <section className="problem section">
         <div className="container problem-grid">
           <div>
@@ -48,17 +66,17 @@ export default function HomePage() {
           </div>
           <div className="problem-points">
             <div>
-              <span className="problem-num">01</span>
+              <span className="problem-mark" aria-hidden="true" />
               <h3>Too many moving parts</h3>
               <p>Bookings, rooms, guests and staff activity need a shared operational picture.</p>
             </div>
             <div>
-              <span className="problem-num">02</span>
+              <span className="problem-mark" aria-hidden="true" />
               <h3>Information gets scattered</h3>
               <p>Important updates become harder to follow when teams rely on separate tools and manual handoffs.</p>
             </div>
             <div>
-              <span className="problem-num">03</span>
+              <span className="problem-mark" aria-hidden="true" />
               <h3>Managers need clarity</h3>
               <p>A practical overview helps teams understand what is happening across the property.</p>
             </div>
@@ -66,45 +84,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Product preview */}
-      <section className="product section" id="product">
-        <div className="container">
-          <SectionHeading
-            eyebrow="ONE OPERATIONAL WORKSPACE"
-            title="Everything your team needs to manage the day."
-            text="PROPETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
-            align="center"
-          />
-          <div className="product-large">
-            <ProductPreview />
-          </div>
-          <p className="demo-disclaimer">Illustrative interface and demo data for product presentation. Not customer or business statistics.</p>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="features section" id="features">
-        <div className="container">
-          <SectionHeading
-            eyebrow="CORE CAPABILITIES"
-            title="A clearer way to run the property."
-            text="Focused modules work together so your team can spend less time coordinating information and more time operating the property."
-          />
-          <div className="feature-grid">
-            {features.map(f => (
-              <article className="feature-card" key={f.number}>
-                <span className="feature-number">{f.number}</span>
-                <div className="feature-icon"><Building size={19} /></div>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
-                <Link href="/features">Learn more <ArrowRight size={15} /></Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions */}
+      {/* 04 Solutions */}
       <section className="solutions section" id="solutions">
         <div className="container">
           <div className="solutions-head">
@@ -117,11 +97,10 @@ export default function HomePage() {
           </div>
           <div className="solution-grid">
             {propertyTypes.slice(0, 4).map((p, i) => {
-              const Icon = [Building, Building, Calendar, Users][i];
+              const Icon = solutionIconSet[i];
               return (
                 <article className="solution-card" key={p.title}>
                   <div className="solution-icon"><Icon /></div>
-                  <span>0{i + 1}</span>
                   <h3>{p.title}</h3>
                   <p>{p.text}</p>
                   <Link href={p.href}>Explore <ArrowRight size={16} /></Link>
@@ -132,7 +111,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* 05 Features */}
+      <section className="features section" id="features">
+        <div className="container">
+          <SectionHeading
+            eyebrow="CORE CAPABILITIES"
+            title="A clearer way to run the property."
+            text="Focused modules work together so your team can spend less time coordinating information and more time operating the property."
+          />
+          <div className="feature-grid">
+            {features.map((f, i) => {
+              const Icon = featureIcons[i];
+              return (
+                <article className="feature-card" key={f.title}>
+                  <div className="feature-icon"><Icon size={20} /></div>
+                  <h3>{f.title}</h3>
+                  <p>{f.text}</p>
+                  {i === 0 && (
+                    <div className="mini-timeline" aria-hidden="true">
+                      <i style={{ left: "0%", width: "38%" }} />
+                      <i style={{ left: "22%", width: "44%" }} />
+                      <i style={{ left: "52%", width: "40%" }} />
+                    </div>
+                  )}
+                  {i === 5 && (
+                    <div className="mini-bars" aria-hidden="true">
+                      {[38, 52, 44, 68, 58, 82, 74].map((h, n) => <i key={n} style={{ height: `${h}%` }} />)}
+                    </div>
+                  )}
+                  <Link href="/features">Learn more <ArrowRight size={15} /></Link>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 06 Platform preview */}
+      <section className="product section" id="product">
+        <div className="container">
+          <SectionHeading
+            eyebrow="ONE OPERATIONAL WORKSPACE"
+            title="Everything your team needs to manage the day."
+            text="PROPETRA is designed around the real flow of a property: from reservation to room, from guest arrival to checkout, and from daily activity to management reporting."
+            align="center"
+          />
+          <div className="product-large">
+            <ProductPreview />
+          </div>
+          <ul className="module-chips" aria-label="PROPETRA modules">
+            {productModules.map((m) => <li key={m.slug}>{m.title}</li>)}
+          </ul>
+          <p className="demo-disclaimer">Illustrative interface and demo data for product presentation. Not customer or business statistics.</p>
+        </div>
+      </section>
+
+      {/* 07 How it works */}
       <section className="how section">
         <div className="container">
           <SectionHeading
@@ -170,7 +204,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why PROPETRA */}
+      {/* 08 Why PROPETRA */}
       <section className="why section">
         <div className="container why-grid">
           <div className="why-copy">
@@ -235,11 +269,11 @@ export default function HomePage() {
             <h2>Technology with a hospitality-first mindset.</h2>
             <p>TEAM PETRA is building PROPETRA as a dedicated hospitality technology platform. The goal is practical software that helps property teams manage their work with greater clarity.</p>
           </div>
-          <Link className="btn light" href="/about">Meet TEAM PETRA <ArrowRight /></Link>
+          <Link className="btn outline" href="/about">Meet TEAM PETRA <ArrowRight /></Link>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* 09 CTA */}
       <section className="cta section" id="demo">
         <div className="container cta-inner">
           <div>
